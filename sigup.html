@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+    <!-- Left: Illustration -->
+    <div class="md:w-1/2 flex items-center justify-center bg-teal-400 p-8">
+      <img src="../../Image/sign-form.png" alt="Signup Illustration" class="max-h-80 mx-auto">
+    </div>
+    <!-- Right: Form -->
+    <div class="md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center">
+      <h2 class="text-center text-xl font-semibold mb-8">SAK SAK</h2>
+      <form class="space-y-6">
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" placeholder="Full Name" class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"/>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Number Phone</label>
+          <input type="text" placeholder="Number Phone" class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"/>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+          <input type="email" placeholder="Email" class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"/>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Password</label>
+          <input type="password" placeholder="Password" class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"/>
+        </div>
+        <div class="flex justify-between items-center">
+          <span></span>
+          <a href="#" class="text-sm text-slate-500 hover:underline">Forgot password ?</a>
+        </div>
+        <button type="submit" class="w-full bg-indigo-900 text-white py-2.5 rounded-lg text-lg font-semibold mt-2 hover:bg-indigo-800 transition">Sign up</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,125 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini-project2</title>
-    <link rel="stylesheet" href="../src/output.css" />
-    <link
-      rel="shortcut icon"
-      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKGTGbxG8U4JL7ToKMVGIQ1Jno1a6gdOM2uQ&s"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <header class="sticky top-0">
-      <nav class="bg-gray-300   ">
-        <div class="mx-[50px] flex justify-between">
-          <div class="flex items-center gap-3">
-            <img
-              class="w-20"
-              src="https://www.cstad.edu.kh/icon.png?ff407d7ec1c2072a"
-              alt=""
-            />
-            <div class="mx-[100px]">
-              <a href="html.jpg" class=" hover:text-blue-400">Home</a>
-              <a class="p-4  hover:text-blue-400" href="course.html">Course</a>
-              <a href="about.html" class=" hover:text-blue-400">About us</a>
-            </div>
-          </div>
-          <div class="items-center flex gap-3">
-            <button class="w-[400px] bg-white px-4 py-2 rounded-sm text-start">
-              Search
-            </button>
-            <button class="bg-gray-200 text-white rounded-sm px-4 py-2">
-              Login
-            </button>
-            <button class="bg-gray-50 rounded-sm px-4 py-2">Singin</button>
-          </div>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Edu Online</title>
+  <link rel="icon" href="../../Image/logo.jpg" />
+  <link rel="stylesheet" href="src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Inter] text-slate-700">
+  <!-- Navbar -->
+  <header class="bg-[#49BBBD] sticky top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="../../Image/logo.jpg" alt="Logo" class="h-8 w-8 rounded-full object-cover" />
+        <span class="text-white font-bold text-lg">TOTC</span>
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <button id="menu-btn" class="text-white text-2xl md:hidden focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex gap-6 text-white/90 font-medium">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="course.html" class="hover:text-white">Course</a>
+        <a href="#" class="hover:text-white">About us</a>
       </nav>
-    </header>
-    <main>
-      <section class="bg-gray-400 w-full">
-        <div class="flex justify-center">
-          <img
-            class="w-[1200px] h-[500px]"
-            src="https://edubears.com/wp-content/uploads/2024/05/DSC_5224_Easy-Resize.com_-e1715467036279.jpg"
-            alt=""
-          />
+
+      <!-- Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#" class="rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow hover:bg-white">Login</a>
+        <a href="#" class="rounded-full border border-white/70 px-4 py-2 text-sm font-medium text-white hover:bg-white/10">Sign Up</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-[#49BBBD] text-white px-6 pb-4 md:hidden">
+      <a href="index.html" class="block py-2 border-b border-white/20">Home</a>
+      <a href="course.html" class="block py-2 border-b border-white/20">Course</a>
+      <a href="#" class="block py-2 border-b border-white/20">About us</a>
+      <a href="#" class="block py-2 border-b border-white/20">Login</a>
+      <a href="#" class="block py-2 border-b border-white/20">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Banner/Header Image -->
+  <section class="bg-white pb-4">
+    <div class="max-w-3xl mx-auto -mt-2 mb-2">
+      <img src="about.jpg" alt="About Us Banner" class="w-full md:max-w-2xl rounded-xl object-contain mx-auto" />
+    </div>
+    <h1 class="text-center text-2xl md:text-3xl font-extrabold my-2 text-[#49BBBD]">ABOUT US</h1>
+  </section>
+
+  <main class="max-w-4xl mx-auto bg-white rounded-xl shadow py-6 px-6 mb-12">
+    <section class="mb-7">
+      <h2 class="text-center text-lg font-bold mb-2 text-[#49BBBD]">About Edu Online</h2>
+      <p class="text-sm text-gray-700 mb-4">
+        At Edu Online, we believe that learning should be seamless, accessible, and inspiring—no matter where you are in the world. Founded with a passion for revolutionizing online education, Edu Online is your all-in-one cloud-based solution designed to simplify the way educators collaborate, manage classes, and deliver exceptional learning experiences.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-lg font-bold mb-2 text-[#49BBBD]">Our Story</h3>
+      <p class="text-sm text-gray-700">
+        Our classroom was born out of a simple yet profound realization: in a fast-evolving digital landscape, education deserves to be shaped into new ways that creatively use the tools of modern services. Launched in early 2023, by a team of active innovators, EduOnline brings Blackboard enhanced lessons and inspiring mentor videos. Our journey has been built by a commitment to innovation, student-driven inspiration, and cutting-edge functionalities.
+      </p>
+    </section>
+
+    <section>
+      <h4 class="text-center text-lg font-bold mb-6 text-[#49BBBD]">Team member</h4>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
+        <img src="brov.jpg" alt="Team Member 1" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="img/sak.jpg" alt="Team Member 2" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="leab.jpg" alt="Team Member 3" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="photo1.png" alt="Team Member 4" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="korng.jpg" alt="Team Member 5" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="theara.jpg" alt="Team Member 6" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#49BBBD] mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-sm">
+      <div>
+        <h4 class="font-bold mb-4 text-base">About Us</h4>
+        <p>Mini project by team 4, for educational purposes only.<br>Learning platform demo site.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-base">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a class="hover:underline" href="index.html">Home</a></li>
+          <li><a class="hover:underline" href="#">Course</a></li>
+          <li><a class="hover:underline" href="aboutus.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-base">Follow Us</h4>
+        <div class="flex gap-4 items-center">
+          <a href="#" class="hover:underline"><img src="../../Image/github.png" class="w-8 h-8 rounded bg-white p-1" alt="GitHub"></a>
+          <a href="#" class="hover:underline"><img src="../../Image/figma.png" class="w-8 h-8 rounded bg-white p-1" alt="Figma"></a>
         </div>
-      </section>
-      <section class="w-[1400px] m-auto">
-        <div class="flex justify-center mt-5">
-          <h3 class="font-bold text-3xl">About Edu Online</h3>
-        </div>
-        <div>
-          <h4 class="font-semibold text-2xl">About Edu Online</h4>
-          <p class="mt-2 text-[24px] ps-4">
-            At Edu Online, we believe that learning should be seamless,
-            accessible, and inspiring—no matter where you are in the world.
-            Founded with a passion for revolutionizing online education, Edu
-            Online is your all-in-one cloud-based platform designed to simplify
-            the way educators create, manage, and deliver exceptional learning
-            experiences. From bustling classrooms to remote study sessions,
-            we're here to make studying online not just easier, but truly
-            transformative.
-          </p>
-          <h4 class="font-semibold text-2xl">Our Story</h4>
-          <p class="my-[50px] text-[24px] ps-4">
-            Edu Online was born out of a simple yet profound realization: in a
-            fast-evolving digital landscape, educators deserve tools that keep
-            pace with their creativity and the needs of modern learners.
-            Launched in [Year – e.g., 2023] by a team of edtech innovators,
-            including former Blackboard executives and Zoom-friendly tech
-            pioneers, we've grown into a trusted partner for schools,
-            universities, and professional training programs worldwide. Our
-            journey has been fueled by a commitment to innovation—drawing
-            inspiration from cutting-edge frameworks like Swift UI to ensure our
-            platform is as intuitive for developers as it is powerful for users.
-          </p>
-          <hr class="border font-bold text-xl" />
-          <h4 class="my-8 font-bold text-3xl">What We Do</h4>
-          <div class="ms-8">
-          <p class="text-[24px]">
-            Edu Online is more than software—it's a comprehensive ecosystem
-            built to handle every aspect of online education in one secure,
-            scalable place. Here's how we make a difference:
-          </p>
-          <p class="text-[24px] mt-4">
-            Edu Online is more than software—it's a comprehensive ecosystem
-            built to handle every aspect of online education in one secure,
-            scalable place. Here's how we make a difference:
-          </p>
-          <p class="text-[24px] mt-4 ms-8">
-            .Seamless Class Creation & Management: Easily build online classes,
-            store course materials, and organize assignments, quizzes, and
-            exams. Monitor due dates, track grades, and deliver personalized
-            feedback—all in a single, intuitive dashboard. <br>
-          
-          
-            . Online Billing & Financial Tools: Streamline invoicing, contracts,
-            and secure transactions to keep your school's finances organized and
-            transparent. <br />
-            . Scheduling & Attendance Tracking: Effortlessly schedule classes and
-            reserve rooms, while maintaining accurate attendance records for
-            campus or remote students. <br />
-            . Customer Support Integration: Built-in tools to enhance
-            communication, ensuring students and educators stay connected and
-            supported every step of the way.
-          </p>
-          <p class="text-[24px] my-8 ms-8">Our Zoom-friendly design means virtual classrooms come alive with high-quality video, collaborative features, and real-time engagement—perfect for hybrid learning environments.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-        <section class="h-[393px] bg-blue-950">
-            <div class="m-auto">
-                <img class="w-20" src="https://www.cstad.edu.kh/icon.png?ff407d7ec1c2072a" alt="logo">
-                <p></p>
-            </div>
-        </section>
-    </footer>
-  </body>
+      </div>
+    </div>
+    <div class="text-center text-xs text-white/70 pt-4 pb-2">&copy; <span id="year"></span> Team 4 - Mini Project. All rights reserved.</div>
+  </footer>
+
+  <!-- JS for mobile toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

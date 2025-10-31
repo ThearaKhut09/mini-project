@@ -1,46 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini-project2</title>
-    <link rel="stylesheet" href="../src/output.css" />
-    <link
-      rel="shortcut icon"
-      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKGTGbxG8U4JL7ToKMVGIQ1Jno1a6gdOM2uQ&s"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <header>
-      <nav class="bg-gray-300">
-        <div class="mx-[50px] flex justify-between">
-          <div class="flex items-center gap-3">
-            <img
-              class="w-[100px]"
-              src="https://www.cstad.edu.kh/icon.png?ff407d7ec1c2072a"
-              alt=""
-            />
-            <div class="mx-[100px] ">
-              <a href="">Home</a>
-              <a class="p-4" href="course.html">Course</a>
-              <a href="about.html">About us</a>
-            </div>
-          </div>
-          <div class="items-center flex gap-3">
-            <button class="w-[400px] bg-white px-4 py-2 rounded-sm text-start">
-              Search
-            </button>
-            <button class="bg-gray-200 text-white rounded-sm px-4 py-2">
-              Login
-            </button>
-            <button class="bg-gray-50 rounded-sm px-4 py-2">Singin</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Project - Home</title>
+  <link rel="icon" href="../../Image/logo.jpg" />
+  <link rel="stylesheet" href="src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Inter] text-slate-700">
+  <!-- Navbar -->
+  <header class="bg-[#49BBBD] sticky top-0">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+      <div class="flex items-center gap-2">
+        <img src="../../Image/logo.jpg" alt="Logo" class="h-8 w-8 rounded-full object-cover" />
+        <span class="text-white font-bold text-lg">TOTC</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-white/90 font-medium ms-3">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="course.html" class="hover:text-white">Course</a>
+        <a href="about.html" class="hover:text-white">About us</a>
+        
+      </nav>
+      <div class="hidden md:block flex-1 px-6">
+        <div class="w-full max-w-xs mx-auto">
+          <div class="relative">
+            <input type="text" placeholder="Search..." class="w-full rounded-full bg-white/95 px-5 py-2.5 pr-10 text-sm text-slate-700 placeholder-slate-400 shadow focus:outline-none" />
+            <svg class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="login.html" class="rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow hover:bg-white">Login</a>
+        <a href="sigup.html" class="hidden sm:inline-flex rounded-full border border-white/70 px-4 py-2 text-sm font-medium text-white hover:bg-white/10">Sign Up</a>
+      </div>
+    </div>
+  </header>
 
-    </main>
-  </body>
+  <!-- Hero Section -->
+  <section class="bg-[#49BBBD] pt-8 pb-16">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-white text-3xl md:text-4xl font-extrabold mb-2 leading-tight">
+          <span class="text-[#FFC27A]">Studying</span> Online is now much easier
+        </h1>
+        <p class="text-white/90 max-w-lg mb-6">TOTC is an interesting platform that will teach you in more an interactive way</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow hover:bg-slate-50">Join for free</a>
+          <button class="flex items-center gap-3">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 shadow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="text-teal-500"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            <span class="text-white font-medium">Watch how it works</span>
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 items-center md:items-end">
+        <div class="flex gap-4">
+          <img src="../../Image/html.png" class="h-20 w-20 rounded-lg bg-white/90 p-3 shadow" alt="HTML">
+          <img src="../../Image/javascript.png" class="h-20 w-20 rounded-lg bg-white/90 p-3 shadow" alt="JavaScript">
+          <img src="../../Image/mysql.png" class="h-20 w-20 rounded-lg bg-white/90 p-3 shadow" alt="MySQL">
+        </div>
+        <div class="flex gap-4">
+          <img src="../../Image/php.jpg" class="h-20 w-20 rounded-lg bg-white/90 p-3 shadow" alt="PHP">
+          <img src="../../Image/Swift.png" class="h-20 w-20 rounded-lg bg-white/90 p-3 shadow" alt="Swift">
+          <img src="../../Image/github.png" class="h-20 w-20 rounded-lg bg-white/90 p-3 shadow" alt="GitHub">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Courses Loved by Students -->
+  <section class="bg-gray-50 py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-center text-xl md:text-2xl font-bold mb-2">Top Courses Loved by Students</h2>
+      <p class="text-center text-slate-500 mb-8">Discover what thousands of educators are learning right now.</p>
+      <div class="grid gap-6 md:grid-cols-3 mt-4">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg px-8 py-7 flex flex-col items-center text-center">
+          <img src="../../Image/phython.png" class="h-14 w-14 mb-3 object-contain" alt="Teach Online" />
+          <h3 class="text-lg font-semibold mb-2">Teach Online Like a Pro</h3>
+          <p class="text-slate-500 text-sm mb-3">Learn how to build engaging online lessons and reach students globally.</p>
+          <a class="text-[#49BBBD] font-medium hover:underline mt-auto" href="#">Start Course</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg px-8 py-7 flex flex-col items-center text-center">
+          <img src="../../Image/html.png" class="h-14 w-14 mb-3 object-contain" alt="Build Course" />
+          <h3 class="text-lg font-semibold mb-2">Build Your First Online Course</h3>
+          <p class="text-slate-500 text-sm mb-3">Planning, recording, publishing and selling your online course step-by-step.</p>
+          <a class="text-[#49BBBD] font-medium hover:underline mt-auto" href="#">Start Course</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg px-8 py-7 flex flex-col items-center text-center">
+          <img src="../../Image/sign-form.png" class="h-14 w-14 mb-3 object-contain" alt="Student Engagement Mastery" />
+          <h3 class="text-lg font-semibold mb-2">Student Engagement Mastery</h3>
+          <p class="text-slate-500 text-sm mb-3">Practical approaches to motivate and retain online students effectively.</p>
+          <a class="text-[#49BBBD] font-medium hover:underline mt-auto" href="#">Start Course</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News and Resources -->
+  <section class="max-w-7xl mx-auto px-4 py-14">
+    <h2 class="text-center text-xl md:text-2xl font-bold mb-2">Latest News and Resources</h2>
+    <p class="text-center text-slate-500 mb-8">See the developments that have occurred to date in the world.</p>
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- News main card -->
+      <div class="bg-white shadow-lg rounded-xl p-6 md:w-1/2 flex flex-col">
+        <img src="../../Image/figma.png" alt="News Main" class="rounded-xl mb-4 object-cover w-full h-56">
+        <h3 class="text-lg font-bold mb-2">Class adds $30 millions to its balance sheet for Zoom-friendly edtech solution</h3>
+        <p class="text-slate-500 mb-2 text-sm">Class Technologies Inc. has raised $30 million to expand its Zoom-friendly edtech software that enables instructors to teach online classes just as they would in person.</p>
+        <a class="text-[#49BBBD] font-medium hover:underline mt-auto" href="#">Read more...</a>
+      </div>
+      <!-- News sidebar/list -->
+      <div class="flex-1 flex flex-col gap-5">
+        <div class="flex gap-4">
+          <img src="../../Image/1.png" alt="news1" class="w-24 h-20 object-cover rounded-xl" />
+          <div>
+            <h4 class="font-semibold mb-1 text-sm">5 Tools Every Online Teacher Needs in 2024</h4>
+            <p class="text-xs text-slate-500 mb-1">Check latest tools to help you teach remotely. <span class="block text-[11px] text-slate-400 mt-1">January 4, 2024</span></p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img src="../../Image/2.jpg" alt="news2" class="w-24 h-20 object-cover rounded-xl" />
+          <div>
+            <h4 class="font-semibold mb-1 text-sm">Edtech Funding: Class raises $30 million</h4>
+            <p class="text-xs text-slate-500 mb-1">New round for online teaching tech. <span class="block text-[11px] text-slate-400 mt-1">January 3, 2024</span></p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img src="../../Image/3.jpg" alt="news3" class="w-24 h-20 object-cover rounded-xl" />
+          <div>
+            <h4 class="font-semibold mb-1 text-sm">Global Partnerships Grow</h4>
+            <p class="text-xs text-slate-500 mb-1">See growth in edtech partnerships worldwide. <span class="block text-[11px] text-slate-400 mt-1">January 2, 2024</span></p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img src="../../Image/4.jpg" alt="news4" class="w-24 h-20 object-cover rounded-xl" />
+          <div>
+            <h4 class="font-semibold mb-1 text-sm">Class Technologies, Inc. raises $30 million</h4>
+            <p class="text-xs text-slate-500 mb-1">The company that built the edtech software raised again. <span class="block text-[11px] text-slate-400 mt-1">January 1, 2024</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#49BBBD] mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-sm">
+      <div>
+        <h4 class="font-bold mb-4 text-base">About Us</h4>
+        <p>Mini project by team 4, for educational purposes only.<br>Learning platform demo site.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-base">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a class="hover:underline" href="#">Home</a></li>
+          <li><a class="hover:underline" href="#">Course</a></li>
+          <li><a class="hover:underline" href="#">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-base">Follow Us</h4>
+        <div class="flex gap-4 items-center">
+          <a href="#" class="hover:underline"><img src="../../Image/github.png" class="w-8 h-8 rounded bg-white p-1" alt="GitHub"></a>
+          <a href="#" class="hover:underline"><img src="../../Image/figma.png" class="w-8 h-8 rounded bg-white p-1" alt="Figma"></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs text-white/70 pt-4 pb-2">&copy; <span id="year"></span> Team 4 - Mini Project. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
 </html>
+
+
