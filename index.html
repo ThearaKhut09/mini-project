@@ -148,30 +148,38 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#49BBBD] mt-16">
-    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-sm">
-      <div>
-        <h4 class="font-bold mb-4 text-base">About Us</h4>
-        <p>Mini project by team 4, for educational purposes only.<br>Learning platform demo site.</p>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4 text-base">Quick Links</h4>
-        <ul class="space-y-2">
-          <li><a class="hover:underline" href="#">Home</a></li>
-          <li><a class="hover:underline" href="#">Course</a></li>
-          <li><a class="hover:underline" href="#">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4 text-base">Follow Us</h4>
-        <div class="flex gap-4 items-center">
-          <a href="#" class="hover:underline"><img src="../../Image/github.png" class="w-8 h-8 rounded bg-white p-1" alt="GitHub"></a>
-          <a href="#" class="hover:underline"><img src="../../Image/figma.png" class="w-8 h-8 rounded bg-white p-1" alt="Figma"></a>
+     <footer class="bg-[#49BBBD] text-white py-12 mt-12">
+      <div
+        class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center md:text-left"
+      >
+        <div>
+          <h4 class="text-xl font-bold mb-3">About Us</h4>
+          <p>
+            Learn anytime, anywhere with professional instructors and modern
+            materials.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-3">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="course.html" class="hover:underline">Courses</a></li>
+            <li><a href="about.html" class="hover:underline">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-3">Follow Us</h4>
+          <div class="flex justify-center md:justify-start gap-4 text-2xl">
+            <i class="fa-brands fa-facebook hover:text-gray-200"></i>
+            <i class="fa-brands fa-youtube hover:text-gray-200"></i>
+            <i class="fa-brands fa-telegram hover:text-gray-200"></i>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="text-center text-xs text-white/70 pt-4 pb-2">&copy; <span id="year"></span> Team 4 - Mini Project. All rights reserved.</div>
-  </footer>
+      <div class="text-center mt-8 border-t border-white/30 pt-4">
+        <p>© 2025 CSTAD. All rights reserved.</p>
+      </div>
+    </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
