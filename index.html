@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mini Project - Home</title>
-    <link rel="icon" href="../../Image/logo.jpg" />
+    <link rel="icon" href="./img/logo.jpg" />
     <link rel="stylesheet" href="src/output.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -25,43 +25,18 @@
           />
           <span class="text-white font-bold text-lg">TOTC</span>
         </div>
-        <div
-          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
-        >
-          <!-- Hamburger for mobile -->
-          <button
-            id="menu-btn"
-            class="text-white text-2xl md:hidden focus:outline-none"
-          >
-            ☰
-          </button>
 
-          <!-- Desktop Menu -->
-          <nav class="hidden md:flex gap-6 text-white/90 font-medium">
-            <a href="#" class="hover:text-white">Home</a>
-            <a href="course.html" class="hover:text-white">Course</a>
-            <a href="about.html" class="hover:text-white">About us</a>
-          </nav>
+        <!-- Menu Button -->
+        <button id="menu-btn" class="text-white text-2xl md:hidden">☰</button>
 
-          <!-- Buttons -->
-        </div>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex gap-6 text-white/90 font-medium">
+          <a href="#" class="hover:text-white">Home</a>
+          <a href="course.html" class="hover:text-white">Course</a>
+          <a href="about.html" class="hover:text-white">About us</a>
+        </nav>
 
-        <!-- Mobile Menu -->
-        <div
-          id="mobile-menu"
-          class="hidden flex-col bg-[#49BBBD] text-white px-6 pb-4 md:hidden"
-        >
-          <a href="index.html" class="block py-2 border-b border-white/20"
-            >Home</a
-          >
-          <a href="course.html" class="block py-2 border-b border-white/20"
-            >Course</a
-          >
-          <a href="about.html" class="block py-2 border-b border-white/20">About us</a>
-          <a href="login.html" class="block py-2 border-b border-white/20">Login</a>
-          <a href="sigup.html" class="block py-2 border-b border-white/20">Sign Up</a>
-        </div>
-
+        <!-- Search + Buttons Desktop -->
         <div class="hidden md:block flex-1 px-6">
           <div class="w-full max-w-xs mx-auto">
             <div class="relative">
@@ -85,18 +60,40 @@
             </div>
           </div>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-4">
           <a
             href="login.html"
-            class="hidden sm:inline-flex  rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow hover:bg-white"
+            class="rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow hover:bg-white"
             >Login</a
           >
           <a
             href="sigup.html"
-            class="hidden sm:inline-flex rounded-full border border-white/70 px-4 py-2 text-sm font-medium text-white hover:bg-white/10"
+            class="rounded-full border border-white/70 px-4 py-2 text-sm font-medium text-white hover:bg-white/10"
             >Sign Up</a
           >
         </div>
+      </div>
+
+      <!-- ✅ FIXED Mobile Menu under ☰ -->
+      <div
+        id="mobile-menu"
+        class="absolute left-4 top-16 hidden flex-col bg-[#49BBBD] text-white px-6 pb-4 md:hidden w-40 rounded-lg shadow-lg"
+      >
+        <a href="index.html" class="block py-2 border-b border-white/20"
+          >Home</a
+        >
+        <a href="course.html" class="block py-2 border-b border-white/20"
+          >Course</a
+        >
+        <a href="about.html" class="block py-2 border-b border-white/20"
+          >About us</a
+        >
+        <a href="login.html" class="block py-2 border-b border-white/20"
+          >Login</a
+        >
+        <a href="sigup.html" class="block py-2 border-b border-white/20"
+          >Sign Up</a
+        >
       </div>
     </header>
 
@@ -209,6 +206,7 @@
               >Start Course</a
             >
           </div>
+
           <!-- Card 2 -->
           <div
             class="bg-white rounded-xl shadow-lg px-8 py-7 flex flex-col items-center text-center"
@@ -231,6 +229,7 @@
               >Start Course</a
             >
           </div>
+
           <!-- Card 3 -->
           <div
             class="bg-white rounded-xl shadow-lg px-8 py-7 flex flex-col items-center text-center"
@@ -286,6 +285,7 @@
             >Read more...</a
           >
         </div>
+
         <!-- News sidebar/list -->
         <div class="flex-1 flex flex-col gap-5">
           <div class="flex gap-4">
@@ -306,6 +306,7 @@
               </p>
             </div>
           </div>
+
           <div class="flex gap-4">
             <img
               src="./img/2.jpg"
@@ -324,6 +325,7 @@
               </p>
             </div>
           </div>
+
           <div class="flex gap-4">
             <img
               src="./img/3.jpg"
@@ -342,6 +344,7 @@
               </p>
             </div>
           </div>
+
           <div class="flex gap-4">
             <img
               src="./img/4.jpg"
@@ -407,12 +410,15 @@
         reserved.
       </div>
     </footer>
+
     <script>
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
+
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
+
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
