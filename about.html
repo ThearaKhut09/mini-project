@@ -11,9 +11,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-[Inter] text-slate-700">
+  <body class="font-[Inter] text-slate-700 dark:bg-gray-900">
     <!-- Navbar -->
-    <header class="bg-[#49BBBD] sticky top-0 z-50">
+    <header class="bg-[#49BBBD] sticky top-0 z-50 dark:bg-gray-900">
       <div
         class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
       >
@@ -26,7 +26,12 @@
           />
           <span class="text-white font-bold text-lg">EDU</span>
         </div>
-
+        <button
+          id="darkToggle"
+          class="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition ms-10"
+        >
+          🌙
+        </button>
         <!-- Hamburger for mobile -->
         <button
           id="menu-btn"
@@ -73,7 +78,7 @@
     </header>
 
     <!-- Banner/Header Image -->
-    <section class="bg-white pb-4">
+    <section class="bg-white pb-4 dark:bg-gray-900">
       <div class="max-w-3xl mx-auto -mt-2 mb-2">
         <img
           src="about.jpg"
@@ -88,12 +93,12 @@
       </h1>
     </section>
 
-    <main class="max-w-4xl mx-auto bg-white rounded-xl shadow py-6 px-6 mb-12">
+    <main class="max-w-4xl mx-auto bg-white rounded-xl shadow py-6 px-6 mb-12 dark:bg-gray-900">
       <section class="mb-7">
         <h2 class="text-center text-lg font-bold mb-2 text-[#49BBBD]">
           About Edu Online
         </h2>
-        <p class="text-sm text-gray-700 mb-4">
+        <p class="text-sm text-gray-700 mb-4 dark:text-white">
           At Edu Online, we believe that learning should be seamless,
           accessible, and inspiring—no matter where you are in the world.
           Founded with a passion for revolutionizing online education, Edu
@@ -105,7 +110,7 @@
 
       <section class="mb-10">
         <h3 class="text-lg font-bold mb-2 text-[#49BBBD]">Our Story</h3>
-        <p class="text-sm text-gray-700">
+        <p class="text-sm text-gray-700  dark:text-white">
           Our classroom was born out of a simple yet profound realization: in a
           fast-evolving digital landscape, education deserves to be shaped into
           new ways that creatively use the tools of modern services. Launched in
@@ -207,7 +212,10 @@
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
-
+      const toggle = document.getElementById("darkToggle");
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
