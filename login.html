@@ -1,70 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link href="src/output.css" rel="stylesheet" />
-  </head>
-  <body class="min-h-screen flex items-center justify-center bg-gray-100">
-    <div
-      class="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row"
-    >
-      <!-- Left: Illustration -->
-      <div class="md:w-1/2 flex items-center justify-center bg-teal-400 p-8">
-        <img
-          src="./img/sign-form.png"
-          alt="Signup Illustration"
-          class="max-h-80 mx-auto"
-        />
-      </div>
-      <!-- Right: Form -->
-      <div class="md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center">
-        <h2 class="text-center text-xl text-[#43C0A3] font-semibold mb-8">Wellcome</h2>
-        <form class="space-y-6">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link href="src/output.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+    <!-- Left: Illustration -->
+    <div class="md:w-1/2 flex items-center justify-center bg-teal-400 p-8">
+      <img src="./img/sign-form.png" alt="Signup Illustration" class="max-h-80 mx-auto" />
+    </div>
+    <!-- Right: Form -->
+    <div class="md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center">
+      <h2 class="text-center text-xl text-[#43C0A3] font-semibold mb-8">Wellcome</h2>
+      <form class="space-y-6">
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+          <input type="email" placeholder="Email"
+            class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400" />
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Password</label>
+          <input type="password" placeholder="Password"
+            class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400" />
+        </div>
+        <div class="flex justify-between">
           <div>
-            <label class="block mb-2 text-sm font-medium text-gray-700"
-              >Email</label
-            >
-            <input
-              type="email"
-              placeholder="Email"
-              class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"
-            />
-          </div>
-          <div>
-            <label class="block mb-2 text-sm font-medium text-gray-700"
-              >Password</label
-            >
-            <input
-              type="password"
-              placeholder="Password"
-              class="w-full py-2.5 px-4 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"
-            />
-          </div>
-          <div class="flex justify-between">
-          <div>
-             
-            <a href="../sigup.html" class="text-sm text-slate-500 hover:underline"
-              >Sign up </a
-            >
+
+            <a href="sigup.html" class="text-sm text-slate-500 hover:underline">Sign up </a>
           </div>
           <div class="flex justify-between items-center">
-            
-            <a href="#" class="text-sm text-slate-500 hover:underline"
-              >Forgot password ?</a
-            >
+
+            <a href="#" class="text-sm text-slate-500 hover:underline">Forgot password ?</a>
           </div>
-          </div>
-          <button
-            onclick="window.location.href='index.html'"
-            type="button"
-            class="w-full bg-[#43C0A3] text-white py-2.5 rounded-lg text-lg font-semibold mt-2 hover:bg-indigo-800 transition"
-          >
-            Login
-          </button>
-        </form>
-      </div>
+        </div>
+        <button onclick="window.location.href='index.html'" type="button"
+          class="w-full bg-[#43C0A3] text-white py-2.5 rounded-lg text-lg font-semibold mt-2 hover:bg-indigo-800 transition">
+          Login
+        </button>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
