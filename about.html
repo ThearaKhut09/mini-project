@@ -1,220 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us - Edu Online</title>
-    <link rel="icon" href="./img/logo.jpg" />
-    <link rel="stylesheet" href="src/output.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="font-[Inter] text-slate-700 dark:bg-gray-900">
-    <!-- Navbar -->
-    <header class="bg-[#49BBBD] sticky top-0 z-50 dark:bg-gray-900">
-      <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
-      >
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <img
-            src="./img/logo.jpg"
-            alt="Logo"
-            class="h-8 w-8 rounded-full object-cover"
-          />
-          <span class="text-white font-bold text-lg">EDU</span>
-        </div>
 
-        <!-- Hamburger for mobile -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Edu Online</title>
+  <link rel="icon" href="./img/logo.jpg" />
+  <link rel="stylesheet" href="src/output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
 
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex gap-6 text-white/90 font-medium">
-          <a href="index.html" class="hover:text-white">Home</a>
-          <a href="course.html" class="hover:text-white">Course</a>
-          <a href="#" class="hover:text-white">About us</a>
-        </nav>
-
-        <!-- Buttons -->
-        <div class="hidden md:flex items-center gap-4">
-          <a
-            href="#"
-            class="rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow hover:bg-white"
-            >Login</a
-          >
-          <a
-            href="#"
-            class="rounded-full border border-white/70 px-4 py-2 text-sm font-medium text-white hover:bg-white/10"
-            >Sign Up</a
-          >
-        </div>
-        <div>
-          <button
-            id="darkToggle"
-            class="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition "
-          >
-            🌙
-          </button>
-          <button
-            id="menu-btn"
-            class="text-white text-2xl md:hidden focus:outline-none"
-          >
-            ☰
-          </button>
-        </div>
+<body class="font-[Inter] text-slate-700 dark:bg-gray-900">
+  <!-- Navbar -->
+  <header class="bg-[#49BBBD] sticky top-0 z-50 dark:bg-gray-900">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+      <div class="flex items-center gap-2">
+        <img src="./img/logo.jpg" alt="Logo" class="h-8 w-8 rounded-full object-cover" />
+        <span class="text-white font-bold text-lg">EDU</span>
       </div>
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden flex-col bg-[#49BBBD] text-white px-6 pb-4 md:hidden"
-      >
-        <a href="index.html" class="block py-2 border-b border-white/20"
-          >Home</a
-        >
-        <a href="course.html" class="block py-2 border-b border-white/20"
-          >Course</a
-        >
-        <a href="#" class="block py-2 border-b border-white/20">About us</a>
-      </div>
-    </header>
 
-    <!-- Banner/Header Image -->
-    <section class="bg-white pb-4 dark:bg-gray-900">
-      <div class="max-w-3xl mx-auto -mt-2 mb-2">
-        <img
-          src="about.jpg"
-          alt="About Us Banner"
-          class="w-full md:max-w-2xl rounded-xl object-contain mx-auto"
-        />
+      <nav class="hidden md:flex gap-6 text-white/90 font-medium ms-20">
+        <a href="index.html" data-nav class="hover:text-white">Home</a>
+        <a href="course.html" data-nav class="hover:text-white">Course</a>
+        <a href="about.html" data-nav class="hover:text-white">About us</a>
+      </nav>
+
+      <div class="hidden md:block flex-1"></div>
+      <div class="hidden md:flex items-center gap-4">
+        <a href="login.html"
+          class="rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow hover:bg-white">Login</a>
+        <a href="sigup.html"
+          class="rounded-full border border-white/70 px-4 py-2 text-sm font-medium text-white hover:bg-white/10">Sign
+          Up</a>
       </div>
-      <h1
-        class="text-center text-2xl md:text-3xl font-extrabold my-2 text-[#49BBBD]"
-      >
-        ABOUT US
-      </h1>
+      <div>
+        <button id="darkToggle"
+          class="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition ms-10">
+          🌙
+        </button>
+        <button id="menu-btn" class="text-white text-2xl md:hidden">☰</button>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="absolute left-4 top-16 hidden flex-col bg-[#49BBBD] text-white px-6 pb-4 md:hidden w-40 rounded-lg shadow-lg">
+      <a href="index.html" data-nav class="block py-2 border-b border-white/20">Home</a>
+      <a href="course.html" data-nav class="block py-2 border-b border-white/20">Course</a>
+      <a href="about.html" data-nav class="block py-2 border-b border-white/20">About us</a>
+      <a href="login.html" class="block py-2 border-b border-white/20">Login</a>
+      <a href="sigup.html" class="block py-2 border-b border-white/20">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Banner/Header Image -->
+  <section class="bg-white pb-4 dark:bg-gray-900">
+    <div class="max-w-3xl mx-auto -mt-2 mb-2">
+      <img src="about.jpg" alt="About Us Banner" class="w-full md:max-w-2xl rounded-xl object-contain mx-auto" />
+    </div>
+    <h1 class="text-center text-2xl md:text-3xl font-extrabold my-2 text-[#49BBBD]">
+      ABOUT US
+    </h1>
+  </section>
+
+  <main class="max-w-4xl mx-auto bg-white rounded-xl shadow py-6 px-6 mb-12 dark:bg-gray-900">
+    <section class="mb-7">
+      <h2 class="text-center text-lg font-bold mb-2 text-[#49BBBD]">
+        About Edu Online
+      </h2>
+      <p class="text-sm text-gray-700 mb-4 dark:text-white">
+        At Edu Online, we believe that learning should be seamless,
+        accessible, and inspiring—no matter where you are in the world.
+        Founded with a passion for revolutionizing online education, Edu
+        Online is your all-in-one cloud-based solution designed to simplify
+        the way educators collaborate, manage classes, and deliver exceptional
+        learning experiences.
+      </p>
     </section>
 
-    <main
-      class="max-w-4xl mx-auto bg-white rounded-xl shadow py-6 px-6 mb-12 dark:bg-gray-900"
-    >
-      <section class="mb-7">
-        <h2 class="text-center text-lg font-bold mb-2 text-[#49BBBD]">
-          About Edu Online
-        </h2>
-        <p class="text-sm text-gray-700 mb-4 dark:text-white">
-          At Edu Online, we believe that learning should be seamless,
-          accessible, and inspiring—no matter where you are in the world.
-          Founded with a passion for revolutionizing online education, Edu
-          Online is your all-in-one cloud-based solution designed to simplify
-          the way educators collaborate, manage classes, and deliver exceptional
-          learning experiences.
+    <section class="mb-10">
+      <h3 class="text-lg font-bold mb-2 text-[#49BBBD]">Our Story</h3>
+      <p class="text-sm text-gray-700 dark:text-white">
+        Our classroom was born out of a simple yet profound realization: in a
+        fast-evolving digital landscape, education deserves to be shaped into
+        new ways that creatively use the tools of modern services. Launched in
+        early 2023, by a team of active innovators, EduOnline brings
+        Blackboard enhanced lessons and inspiring mentor videos. Our journey
+        has been built by a commitment to innovation, student-driven
+        inspiration, and cutting-edge functionalities.
+      </p>
+    </section>
+
+    <section>
+      <h4 class="text-center text-lg font-bold mb-6 text-[#49BBBD]">
+        Team member
+      </h4>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
+        <img src="brov.jpg" alt="Team Member 1" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="img/sak.jpg" alt="Team Member 2" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="leab.jpg" alt="Team Member 3" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="photo1.png" alt="Team Member 4" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="korng.jpg" alt="Team Member 5" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+        <img src="theara.jpg" alt="Team Member 6" class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#49BBBD] text-white py-12 mt-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-3">About Us</h4>
+        <p>
+          Learn anytime, anywhere with professional instructors and modern
+          materials.
         </p>
-      </section>
-
-      <section class="mb-10">
-        <h3 class="text-lg font-bold mb-2 text-[#49BBBD]">Our Story</h3>
-        <p class="text-sm text-gray-700 dark:text-white">
-          Our classroom was born out of a simple yet profound realization: in a
-          fast-evolving digital landscape, education deserves to be shaped into
-          new ways that creatively use the tools of modern services. Launched in
-          early 2023, by a team of active innovators, EduOnline brings
-          Blackboard enhanced lessons and inspiring mentor videos. Our journey
-          has been built by a commitment to innovation, student-driven
-          inspiration, and cutting-edge functionalities.
-        </p>
-      </section>
-
-      <section>
-        <h4 class="text-center text-lg font-bold mb-6 text-[#49BBBD]">
-          Team member
-        </h4>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
-          <img
-            src="brov.jpg"
-            alt="Team Member 1"
-            class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20"
-          />
-          <img
-            src="img/sak.jpg"
-            alt="Team Member 2"
-            class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20"
-          />
-          <img
-            src="leab.jpg"
-            alt="Team Member 3"
-            class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20"
-          />
-          <img
-            src="photo1.png"
-            alt="Team Member 4"
-            class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20"
-          />
-          <img
-            src="korng.jpg"
-            alt="Team Member 5"
-            class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20"
-          />
-          <img
-            src="theara.jpg"
-            alt="Team Member 6"
-            class="w-28 h-28 object-cover rounded-xl bg-[#49BBBD]/20"
-          />
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#49BBBD] text-white py-12 mt-12">
-      <div
-        class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center md:text-left"
-      >
-        <div>
-          <h4 class="text-xl font-bold mb-3">About Us</h4>
-          <p>
-            Learn anytime, anywhere with professional instructors and modern
-            materials.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-xl font-bold mb-3">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li><a href="course.html" class="hover:underline">Courses</a></li>
-            <li><a href="about.html" class="hover:underline">About</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-xl font-bold mb-3">Follow Us</h4>
-          <div class="flex justify-center md:justify-start gap-4 text-2xl">
-            <i class="fa-brands fa-facebook hover:text-gray-200"></i>
-            <i class="fa-brands fa-youtube hover:text-gray-200"></i>
-            <i class="fa-brands fa-telegram hover:text-gray-200"></i>
-          </div>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-3">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="course.html" class="hover:underline">Courses</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-3">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <i class="fa-brands fa-facebook hover:text-gray-200"></i>
+          <i class="fa-brands fa-youtube hover:text-gray-200"></i>
+          <i class="fa-brands fa-telegram hover:text-gray-200"></i>
         </div>
       </div>
-      <div class="text-center mt-8 border-t border-white/30 pt-4">
-        <p>© 2025 EDU. All rights reserved.</p>
-      </div>
-    </footer>
+    </div>
+    <div class="text-center mt-8 border-t border-white/30 pt-4">
+      <p>© 2025 EDU. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!-- JS for mobile toggle -->
-    <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
+  <!-- JS for mobile toggle -->
+  <script src="nav.js"></script>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-      const toggle = document.getElementById("darkToggle");
-      toggle.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-      });
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-        <script
-      src="https://kit.fontawesome.com/098113559b.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    const toggle = document.getElementById("darkToggle");
+    toggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="https://kit.fontawesome.com/098113559b.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

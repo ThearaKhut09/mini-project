@@ -1,506 +1,395 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Project 2 | CSTAD</title>
-    <link rel="stylesheet" href="src/output.css" />
-    <link
-      rel="shortcut icon"
-      href="./img/logo-removebg-preview.png"
-      type="image/x-icon"
-    />
-  </head>
 
-  <body
-    class="bg-gray-50 text-gray-800 transition-colors duration-500 dark:bg-gray-900 dark:text-gray-100"
-  >
-    <!-- Header -->
-    <header
-      class="sticky top-0 z-50 bg-[#49BBBD]  dark:bg-gray-800 shadow-md transition"
-    >
-      <nav
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3"
-      >
-        <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <img
-            src="./img/logo-removebg-preview.png"
-            class="w-16 mt-2"
-            alt="Logo"
-          />
-          <span class="hidden sm:block text-2xl font-bold text-white"
-            >EDU</span
-          >
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Project 2 | CSTAD</title>
+  <link rel="stylesheet" href="src/output.css" />
+  <link rel="shortcut icon" href="./img/logo-removebg-preview.png" type="image/x-icon" />
+</head>
 
-        <!-- Nav Links (Desktop) -->
-        <div
-          id="menu"
-          class="hidden md:flex gap-10 text-lg font-medium transition"
-        >
-        <ul>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-500 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Header -->
+  <header class="bg-[#49BBBD] sticky top-0 z-50 dark:bg-gray-900">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+      <div class="flex items-center gap-2">
+        <img src="./img/logo.jpg" alt="Logo" class="h-8 w-8 rounded-full object-cover" />
+        <span class="text-white font-bold text-lg">EDU</span>
+      </div>
 
-         <a href="index.html" class="hover:text-gray-500 text-white transition p-4">Home</a>
-          <a href="#" class="hover:text-gray-500 text-white transition p-4">Courses</a>
-          <a href="about.html" class="hover:text-gray-500 text-white transition p-4"
-            >About Us</a
-          >
-          </ul>
-        </div>
-
-        <!-- Profile / Toggle -->
-        <div class="flex items-center gap-4">
-          <button
-            id="darkToggle"
-            class="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          >
-            🌙
-          </button>
-          <img
-            src="./img/sak.jpg"
-            class="w-10 h-10 rounded-full border"
-            alt=""
-          />
-          <p class="font-semibold hidden sm:block text-white">Sak Sak</p>
-          <i class="fa-solid fa-chevron-down text-gray-500 hidden sm:block"></i>
-
-          <!-- Mobile Menu Icon -->
-
-          <button id="menu-btn" class="md:hidden text-2xl ml-3 ">
-            <i class="text-white fa-solid fa-bars "></i>
-          </button>
-        </div>
+      <nav class="hidden md:flex gap-6 text-white/90 font-medium ms-20">
+        <a href="index.html" data-nav class="hover:text-white">Home</a>
+        <a href="course.html" data-nav class="hover:text-white">Course</a>
+        <a href="about.html" data-nav class="hover:text-white">About us</a>
       </nav>
 
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden bg-white dark:bg-gray-800 md:hidden border-t border-gray-200 dark:border-gray-700"
-      >
-        <a
-          href="index.html"
-          class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >Home</a
-        >
-        <a
-          href="#"
-          class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >Courses</a
-        >
-        <a
-          href="about.html"
-          class="block py-3 px-6 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >About Us</a
-        >
+      <div class="hidden md:block flex-1 px-6">
+        <div class="w-full max-w-xs mx-auto">
+          <div class="relative">
+            <input type="text" placeholder="Search..."
+              class="w-full rounded-full bg-white/95 px-5 py-2.5 pr-10 text-sm text-slate-700 placeholder-slate-400 shadow focus:outline-none" />
+            <svg class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.3-4.3"></path>
+            </svg>
+          </div>
+        </div>
       </div>
-    </header>
+      <div class="hidden md:flex items-center gap-4 text-white">
+        <img src="./img/sak.jpg" alt="Sak Sak profile" class="w-10 h-10 rounded-full border" />
+        <p class="font-semibold hidden lg:block">Sak Sak</p>
+        <i class="fa-solid fa-chevron-down text-white/80 hidden lg:block"></i>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="darkToggle" class="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          🌙
+        </button>
+        <button id="menu-btn" class="text-white text-2xl md:hidden">☰</button>
+      </div>
+    </div>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Welcome Section -->
-      <section class="bg-white dark:bg-gray-800 py-10 shadow-sm transition">
-        <div
-          class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap"
-        >
-          <h3 class="text-2xl font-semibold">
-            Welcome back! Ready for your next lesson?
-          </h3>
-          <a href="#" class="text-[#49BBBD] text-xl font-bold hover:underline"
-            >View History</a
-          >
-        </div>
+    <div id="mobile-menu"
+      class="absolute left-4 top-16 hidden flex-col bg-[#49BBBD] text-white px-6 pb-4 md:hidden w-40 rounded-lg shadow-lg">
+      <a href="index.html" data-nav class="block py-2 border-b border-white/20">Home</a>
+      <a href="course.html" data-nav class="block py-2 border-b border-white/20">Course</a>
+      <a href="about.html" data-nav class="block py-2 border-b border-white/20">About us</a>
+      <a href="login.html" class="block py-2 border-b border-white/20">Login</a>
+      <a href="sigup.html" class="block py-2 border-b border-white/20">Sign Up</a>
+    </div>
+  </header>
 
-        <!-- Progress Cards -->
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 mt-6">
-          <!-- Card Template -->
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5K08rKxUEHZsgxTHElnQc6bFEmuVzD6FUg&s"
-              class="w-full h-56 object-cover rounded-lg"
-            />
-            <p class="mt-3 text-lg font-medium">
-              PHP Full Course for Beginner to Advanced
-            </p>
-            <div class="flex items-center gap-3 mt-4">
-              <img src="./img/sak.jpg" class="w-10 h-10 rounded-full" />
-              <p class="font-semibold">SAK</p>
-            </div>
-            <div class="w-full bg-gray-200 h-2 rounded-full mt-4">
-              <div
-                class="bg-[#49BBBD] h-2 rounded-full"
-                style="width: 65%"
-              ></div>
-            </div>
-          </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Welcome Section -->
+    <section class="bg-white dark:bg-gray-800 py-10 shadow-sm transition">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap">
+        <h3 class="text-2xl font-semibold">
+          Welcome back! Ready for your next lesson?
+        </h3>
+        <a href="#" class="text-[#49BBBD] text-xl font-bold hover:underline">View History</a>
+      </div>
 
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1"
-          >
-            <img
-              src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png"
-              class="w-full h-56 object-cover rounded-lg"
-            />
-            <p class="mt-3 text-lg font-medium">
-              PHP Full Course for Beginner to Advanced
-            </p>
-            <div class="flex items-center gap-3 mt-4">
-              <img src="./img/sak.jpg" class="w-10 h-10 rounded-full" />
-              <p class="font-semibold">SAK</p>
-            </div>
-            <div class="w-full bg-gray-200 h-2 rounded-full mt-4">
-              <div
-                class="bg-[#49BBBD] h-2 rounded-full"
-                style="width: 45%"
-              ></div>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1"
-          >
-            <img
-              src="./img/html.jpg"
-              class="w-full h-56 object-cover rounded-lg"
-            />
-            <p class="mt-3 text-lg font-medium">
-              PHP Full Course for Beginner to Advanced
-            </p>
-            <div class="flex items-center gap-3 mt-4">
-              <img src="./img/sak.jpg" class="w-10 h-10 rounded-full" />
-              <p class="font-semibold">SAK</p>
-            </div>
-            <div class="w-full bg-gray-200 h-2 rounded-full mt-4">
-              <div
-                class="bg-[#49BBBD] h-2 rounded-full"
-                style="width: 95%"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Recommended Section -->
-      <section class="bg-[#E0F7FA] dark:bg-gray-800 py-12 mt-10 transition">
-        <div
-          class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap"
-        >
-          <h3 class="text-3xl font-bold">Recommended for You</h3>
-          <a
-            href="#"
-            class="text-[#49BBBD] text-xl font-semibold hover:underline"
-            >See All</a
-          >
-        </div>
-
-        <!-- Course Cards -->
-        <div
-          class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 px-6 mt-8"
-        >
-          <!-- Card Example -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img
-              class="w-full h-60 object-contain p-4"
-              src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-              alt=""
-            />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">HTML Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300 text-base">
-                Learn HTML to structure web pages using tags and elements.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Duplicate 3 more -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/css.jpg" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">CSS Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Style websites beautifully using modern CSS.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/js.jpg" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">JavaScript Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Learn JS for interactivity and modern web logic.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/python.png" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">Python Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Master Python for data, automation, and backend.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section2 -->
-      <section class="bg-white dark:bg-gray-800 py-12 mt-10 transition">
-        <div
-          class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap"
-        >
-          <h3 class="text-3xl font-bold">Recommended for You</h3>
-          <a
-            href="#"
-            class="text-[#49BBBD] text-xl font-semibold hover:underline"
-            >See All</a
-          >
-        </div>
-
-        <!-- Course Cards -->
-        <div
-          class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 px-6 mt-8"
-        >
-          <!-- Card 1 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img
-              class="w-full h-60 object-contain p-4"
-              src="./img/python.png"
-              alt=""
-            />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">HTML Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300 text-base">
-                Learn HTML to structure web pages using tags and elements.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- card2 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/css.jpg" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">CSS Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Style websites beautifully using modern CSS.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <!-- card3 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/swift.png" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">JavaScript Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Learn JS for interactivity and modern web logic.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <!-- card4 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/kotlin.png" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">Python Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Master Python for data, automation, and backend.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section3 -->
-      <section class="bg-white dark:bg-gray-800 py-12 mt-10 transition">
-        <div
-          class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap"
-        >
-          <h3 class="text-3xl font-bold">Recommended for You</h3>
-          <a
-            href="#"
-            class="text-[#49BBBD] text-xl font-semibold hover:underline"
-            >See All</a
-          >
-        </div>
-
-        <!-- card course -->
-        <div
-          class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 px-6 mt-8"
-        >
-          <!-- Card Example -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img
-              class="w-full h-60 object-contain p-4"
-              src="./img/php.jpg"
-              alt=""
-            />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">HTML Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300 text-base">
-                Learn HTML to structure web pages using tags and elements.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- card2 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/mysql.png" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">CSS Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Style websites beautifully using modern CSS.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <!-- card3 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="https://lthub.ubc.ca/files/2021/06/GitHub-Logo.png" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">JavaScript Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Learn JS for interactivity and modern web logic.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <!-- card4 -->
-          <div
-            class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2"
-          >
-            <img class="w-full h-60 object-contain p-4" src="./img/java.png" />
-            <div class="p-4">
-              <h2 class="text-xl font-bold">Python Course</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300">
-                Master Python for data, automation, and backend.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <del>$100</del>
-                <p class="text-[#49BBBD] font-bold">$50</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#49BBBD] text-white py-12 mt-12">
-      <div
-        class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center md:text-left"
-      >
-        <div>
-          <h4 class="text-xl font-bold mb-3">About Us</h4>
-          <p>
-            Learn anytime, anywhere with professional instructors and modern
-            materials.
+      <!-- Progress Cards -->
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 mt-6">
+        <!-- Card Template -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5K08rKxUEHZsgxTHElnQc6bFEmuVzD6FUg&s"
+            class="w-full h-56 object-cover rounded-lg" />
+          <p class="mt-3 text-lg font-medium">
+            PHP Full Course for Beginner to Advanced
           </p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="./img/sak.jpg" class="w-10 h-10 rounded-full" />
+            <p class="font-semibold">SAK</p>
+          </div>
+          <div class="w-full bg-gray-200 h-2 rounded-full mt-4">
+            <div class="bg-[#49BBBD] h-2 rounded-full" style="width: 65%"></div>
+          </div>
         </div>
-        <div>
-          <h4 class="text-xl font-bold mb-3">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li><a href="course.html" class="hover:underline">Courses</a></li>
-            <li><a href="about.html" class="hover:underline">About</a></li>
-          </ul>
+
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1">
+          <img src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png"
+            class="w-full h-56 object-cover rounded-lg" />
+          <p class="mt-3 text-lg font-medium">
+            PHP Full Course for Beginner to Advanced
+          </p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="./img/sak.jpg" class="w-10 h-10 rounded-full" />
+            <p class="font-semibold">SAK</p>
+          </div>
+          <div class="w-full bg-gray-200 h-2 rounded-full mt-4">
+            <div class="bg-[#49BBBD] h-2 rounded-full" style="width: 45%"></div>
+          </div>
         </div>
-        <div>
-          <h4 class="text-xl font-bold mb-3">Follow Us</h4>
-          <div class="flex justify-center md:justify-start gap-4 text-2xl">
-            <i class="fa-brands fa-facebook hover:text-gray-200"></i>
-            <i class="fa-brands fa-youtube hover:text-gray-200"></i>
-            <i class="fa-brands fa-telegram hover:text-gray-200"></i>
+
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1">
+          <img src="./img/html.jpg" class="w-full h-56 object-cover rounded-lg" />
+          <p class="mt-3 text-lg font-medium">
+            PHP Full Course for Beginner to Advanced
+          </p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="./img/sak.jpg" class="w-10 h-10 rounded-full" />
+            <p class="font-semibold">SAK</p>
+          </div>
+          <div class="w-full bg-gray-200 h-2 rounded-full mt-4">
+            <div class="bg-[#49BBBD] h-2 rounded-full" style="width: 95%"></div>
           </div>
         </div>
       </div>
-      <div class="text-center mt-8 border-t border-white/30 pt-4">
-        <p>© 2025 EDU. All rights reserved.</p>
+    </section>
+
+    <!-- Recommended Section -->
+    <section class="bg-[#E0F7FA] dark:bg-gray-800 py-12 mt-10 transition">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap">
+        <h3 class="text-3xl font-bold">Recommended for You</h3>
+        <a href="#" class="text-[#49BBBD] text-xl font-semibold hover:underline">See All</a>
       </div>
-    </footer>
 
-    <!-- JS -->
-    <script
-      src="https://kit.fontawesome.com/098113559b.js"
-      crossorigin="anonymous"
-    ></script>
+      <!-- Course Cards -->
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 px-6 mt-8">
+        <!-- Card Example -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">HTML Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 text-base">
+              Learn HTML to structure web pages using tags and elements.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
 
-    <script>
-      // Dark mode toggle
-      const toggle = document.getElementById("darkToggle");
-      toggle.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-      });
+        <!-- Duplicate 3 more -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/css.jpg" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">CSS Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Style websites beautifully using modern CSS.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
 
-      // Mobile menu
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/js.jpg" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">JavaScript Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Learn JS for interactivity and modern web logic.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/python.png" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">Python Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Master Python for data, automation, and backend.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section2 -->
+    <section class="bg-white dark:bg-gray-800 py-12 mt-10 transition">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap">
+        <h3 class="text-3xl font-bold">Recommended for You</h3>
+        <a href="#" class="text-[#49BBBD] text-xl font-semibold hover:underline">See All</a>
+      </div>
+
+      <!-- Course Cards -->
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 px-6 mt-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/python.png" alt="" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">HTML Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 text-base">
+              Learn HTML to structure web pages using tags and elements.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card2 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/css.jpg" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">CSS Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Style websites beautifully using modern CSS.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/swift.png" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">JavaScript Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Learn JS for interactivity and modern web logic.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+        <!-- card4 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/kotlin.png" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">Python Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Master Python for data, automation, and backend.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section3 -->
+    <section class="bg-white dark:bg-gray-800 py-12 mt-10 transition">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap">
+        <h3 class="text-3xl font-bold">Recommended for You</h3>
+        <a href="#" class="text-[#49BBBD] text-xl font-semibold hover:underline">See All</a>
+      </div>
+
+      <!-- card course -->
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 px-6 mt-8">
+        <!-- Card Example -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/php.jpg" alt="" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">HTML Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300 text-base">
+              Learn HTML to structure web pages using tags and elements.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card2 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/mysql.png" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">CSS Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Style websites beautifully using modern CSS.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="https://lthub.ubc.ca/files/2021/06/GitHub-Logo.png" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">JavaScript Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Learn JS for interactivity and modern web logic.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+        <!-- card4 -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
+          <img class="w-full h-60 object-contain p-4" src="./img/java.png" />
+          <div class="p-4">
+            <h2 class="text-xl font-bold">Python Course</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Master Python for data, automation, and backend.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <del>$100</del>
+              <p class="text-[#49BBBD] font-bold">$50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#49BBBD] text-white py-12 mt-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center md:text-left">
+      <div>
+        <h4 class="text-xl font-bold mb-3">About Us</h4>
+        <p>
+          Learn anytime, anywhere with professional instructors and modern
+          materials.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-3">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="course.html" class="hover:underline">Courses</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-3">Follow Us</h4>
+        <div class="flex justify-center md:justify-start gap-4 text-2xl">
+          <i class="fa-brands fa-facebook hover:text-gray-200"></i>
+          <i class="fa-brands fa-youtube hover:text-gray-200"></i>
+          <i class="fa-brands fa-telegram hover:text-gray-200"></i>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8 border-t border-white/30 pt-4">
+      <p>© 2025 EDU. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="nav.js"></script>
+  <script src="https://kit.fontawesome.com/098113559b.js" crossorigin="anonymous"></script>
+
+  <script>
+    // Dark mode toggle
+    const toggle = document.getElementById("darkToggle");
+    toggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
 </html>
