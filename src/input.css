@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+.progress-45 {
+  width: 45%;
+}
+
+.progress-65 {
+  width: 65%;
+}
+
+.progress-95 {
+  width: 95%;
+}
